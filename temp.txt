@@ -389,125 +389,45 @@ class AnglesFrame(LayoutFrame):
                 ):
         super().__init__(master, units, title)
 
-class SpeedFrame(LayoutFrame):
-    def __init__(self,
-                master,
-                units = [
-                    {
-                        "name":"Centimeters per second",
-                        "unit":"cm⁻¹",
-                        "conversion":(0.01)
-                    },
-                    {
-                        "name":"Kilometers per hour",
-                        "unit":"Kmhr⁻¹",
-                        "conversion":(0.277778)
-                    },
-                    {
-                        "name":"Meters per second",
-                        "unit":"ms⁻¹",
-                        "conversion":(1)
-                    },
-                    {
-                        "name":"Feet per second",
-                        "unit":"Fs⁻¹",
-                        "conversion":(0.3048)
-                    },
-                    {
-                        "name":"Knots",
-                        "unit":"knots",
-                        "conversion":(0.5144)
-                    },
-                    {
-                        "name":"Miles per hour",
-                        "unit":"mhr⁻¹",
-                        "conversion":(0.447)
-                    },
-                    {
-                        "name":"Kilometers per second",
-                        "unit":"Kms⁻¹",
-                        "conversion":(1000)
-                    },
-                    {
-                        "name":"Mach",
-                        "unit":"Mach",
-                        "conversion":(340.3)
-                    }
-                        ],
-                title="speed"
-                ):
-        super().__init__(master, units, title)
-
-class PressureFrame(LayoutFrame):
-    def __init__(self,
-                master,
-                units = [
-                    {
-                        "name":"Pascal",
-                        "unit":"P",
-                        "conversion":(0.00001)
-                    },
-                    {
-                        "name":"Mercury Millimeters",
-                        "unit":"mmhg",
-                        "conversion":(0.001316)
-                    },
-                    {
-                        "name":"Kilopascal",
-                        "unit":"⁰",
-                        "conversion":(0.009869)
-                    },
-                    {
-                        "name":"Bars",
-                        "unit":"Bars",
-                        "conversion":(0.986923)
-                    },
-                    {
-                        "name":"Pounds per inch²",
-                        "unit":"Pi²",
-                        "conversion":(0.068046)
-                    },
-                    {
-                        "name":"Atmospheres",
-                        "unit":"Atmosphers",
-                        "conversion":(1)
-                    },
-                    
-                        ],
-                title="pressure"
-                ):
-        super().__init__(master, units, title)
-
-class PowerFrame(LayoutFrame):
-    def __init__(self,
-                master,
-                units = [
-                    {
-                        "name":"Foot-pound/min",
-                        "unit":"Foot-pound/min",
-                        "conversion":(0.022597)
-                    },
-                    {
-                        "name":"Watts",
-                        "unit":"Watts",
-                        "conversion":(1)
-                    },
-                    {
-                        "name":"Kilowatts",
-                        "unit":"Kilowatts",
-                        "conversion":(1000)
-                    },
-                    {
-                        "name":"Horsepower",
-                        "unit":"Hp",
-                        "conversion":(745.6999)
-                    },
-                    {
-                        "name":"BTUs/min",
-                        "unit":"Bmin⁻¹",
-                        "conversion":(17.58427)
-                    },
-                        ],
-                title="power"
-                ):
-        super().__init__(master, units, title)
+[
+            {
+                "name":"Centimeters per second",
+                "unit":"cm⁻¹",
+                "conversion":(0.01)
+            },
+            {
+                "name":"Kilometers per hour",
+                "unit":"Kmhr⁻¹",
+                "conversion":(0.277778)
+            },
+            {
+                "name":"Meters per second",
+                "unit":"ms⁻¹",
+                "conversion":(1)
+            },
+            {
+                "name":"Feet per second",
+                "unit":"Fs⁻¹",
+                "conversion":(0.3048)
+            },
+            {
+                "name":"Knots",
+                "unit":"knots",
+                "conversion":(0.5144)
+            },
+            {
+                "name":"Miles per hour",
+                "unit":"mhr⁻¹",
+                "conversion":(0.447)
+            },
+            {
+                "name":"Kilometers per second",
+                "unit":"Kms⁻¹",
+                "conversion":(1000)
+            },
+            {
+                "name":"Mach",
+                "unit":"Mach",
+                "conversion":(340.3)
+            }
+        ]
