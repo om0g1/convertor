@@ -205,12 +205,12 @@ class AreaFrame(LayoutFrame):
                     },
                     {
                         "name":"Square Feet",
-                        "unit":"Feet",
+                        "unit":"sq.ft",
                         "conversion":(0.3048000097536**2)
                     },
                     {
                         "name":"Square Yards",
-                        "unit":"Yards²",
+                        "unit":"sq.yd",
                         "conversion":(0.8361269999970039)
                     },
                     {
@@ -220,7 +220,7 @@ class AreaFrame(LayoutFrame):
                     },
                     {
                         "name":"Hectare",
-                        "unit":"ha",
+                        "unit":"Ha",
                         "conversion":(10**4)
                     },
                     {
@@ -230,12 +230,12 @@ class AreaFrame(LayoutFrame):
                     },
                     {
                         "name":"Square Miles",
-                        "unit":"Miles²",
+                        "unit":"mi²",
                         "conversion":(2589986.9951907200739)
                     },
                     {
                         "name":"Acre",
-                        "unit":"a",
+                        "unit":"ac",
                         "conversion":(4046.856)
                     }
                         ], 
@@ -264,7 +264,7 @@ class VolumeFrame(LayoutFrame):
                     },
                     {
                         "name":"Cubic Feet",
-                        "unit":"Feet",
+                        "unit":"Feet³",
                         "conversion":(0.3048000097536**3)
                     },
                     {
@@ -464,7 +464,7 @@ class PressureFrame(LayoutFrame):
                     },
                     {
                         "name":"Pounds per inch²",
-                        "unit":"Pi²",
+                        "unit":"psi",
                         "conversion":(0.068046)
                     },
                     {
@@ -484,7 +484,7 @@ class PowerFrame(LayoutFrame):
                 units = [
                     {
                         "name":"Foot-pound/min",
-                        "unit":"Foot-pound/min",
+                        "unit":"ft⋅lbf",
                         "conversion":(0.022597)
                     },
                     {
@@ -509,5 +509,307 @@ class PowerFrame(LayoutFrame):
                     },
                         ],
                 title="power"
+                ):
+        super().__init__(master, units, title)
+
+class EnergyFrame(LayoutFrame):
+    def __init__(self,
+                master,
+                units = [
+                    {
+                        "name":"Electron Volts",
+                        "unit":"Ev",
+                        "conversion":(1.602177e-19)
+                    },
+                    {
+                        "name":"Joules",
+                        "unit":"Joules",
+                        "conversion":(1)
+                    },
+                    {
+                        "name":"Kilojoules",
+                        "unit":"kj",
+                        "conversion":(1000)
+                    },
+                    {
+                        "name":"Thermal calories",
+                        "unit":"°C calorie",
+                        "conversion":(4.184)
+                    },
+                    {
+                        "name":"Food Calories",
+                        "unit":"kcal",
+                        "conversion":(4184)
+                    },
+                    {
+                        "name":"Foot Pounds",
+                        "unit":"ft⋅lbf",
+                        "conversion":(1.355818)
+                    },
+                    {
+                        "name":"British thermal units",
+                        "unit":"Btu",
+                        "conversion":(1,055.056)
+                    },
+                        ],
+                title="power"
+                ):
+        super().__init__(master, units, title)
+
+class DataFrame(LayoutFrame):
+    def __init__(self,
+                master,
+                units = [
+                    {
+                        "name":"Bits",
+                        "unit":"bits",
+                        "conversion":(0.000000125)
+                    },
+                    {
+                        "name":"Bytes",
+                        "unit":"Bytes",
+                        "conversion":(0.000001)
+                    },
+                    {
+                        "name":"Kilobits",
+                        "unit":"Kbit",
+                        "conversion":(0.000125)
+                    },
+                    {
+                        "name":"Kibibits",
+                        "unit":"Kb",
+                        "conversion":(0.000128)
+                    },
+                    {
+                        "name":"Kilobyte",
+                        "unit":"KB",
+                        "conversion":(0.001)
+                    },
+                    {
+                        "name":"Kibibytes",
+                        "unit":"KiB",
+                        "conversion":(0.001024)
+                    },
+                    {
+                        "name":"Megabits",
+                        "unit":"Mbit",
+                        "conversion":(0.125)
+                    },
+                    {
+                        "name":"Mebibits",
+                        "unit":"mb",
+                        "conversion":(0.131072)
+                    },
+                    {
+                        "name":"Megabytes",
+                        "unit":"MB",
+                        "conversion":(1)
+                    },
+                    {
+                        "name":"Mebibytes",
+                        "unit":"MiB",
+                        "conversion":(0.131072)
+                    },
+                    {
+                        "name":"Gigabits",
+                        "unit":"Gbit",
+                        "conversion":(125)
+                    },
+                    {
+                        "name":"Gibibits",
+                        "unit":"Gb",
+                        "conversion":(134.2177)
+                    },
+                    {
+                        "name":"Gigabytes",
+                        "unit":"GB",
+                        "conversion":(1000)
+                    },
+                    {
+                        "name":"Gibibytes",
+                        "unit":"GiB",
+                        "conversion":(1073.742)
+                    },
+                    {
+                        "name":"Terabits",
+                        "unit":"TBit",
+                        "conversion":(125000)
+                    },
+                    {
+                        "name":"Tebibits",
+                        "unit":"Tb",
+                        "conversion":(137439)
+                    },
+                    {
+                        "name":"Terabytes",
+                        "unit":"TB",
+                        "conversion":(1000000)
+                    },
+                    {
+                        "name":"Tebibytes",
+                        "unit":"TiB",
+                        "conversion":(1000000)
+                    },
+                    {
+                        "name":"Petabits",
+                        "unit":"Pbit",
+                        "conversion":(125000000)
+                    },
+                    {
+                        "name":"Pebibits",
+                        "unit":"Pb",
+                        "conversion":(140737488)
+                    },
+                    {
+                        "name":"Petabytes",
+                        "unit":"PB",
+                        "conversion":(1000000000)
+                    },
+                    {
+                        "name":"Pebibytes",
+                        "unit":"PiB",
+                        "conversion":(1125899907)
+                    },
+                    {
+                        "name":"Exabits",
+                        "unit":"Ebit",
+                        "conversion":(125000000000)
+                    },
+                    {
+                        "name":"Exbibits",
+                        "unit":"Eb",
+                        "conversion":(144115188076)
+                    },
+                    {
+                        "name":"Exabytes",
+                        "unit":"EB",
+                        "conversion":(1000000000000)
+                    },
+                    {
+                        "name":"Exbibytes",
+                        "unit":"EiB",
+                        "conversion":(1152921504607)
+                    },
+                    {
+                        "name":"Zetabits",
+                        "unit":"Zbit",
+                        "conversion":(125000000000000)
+                    },
+                    {
+                        "name":"Zebibits",
+                        "unit":"Zb",
+                        "conversion":(147573952589676)
+                    },
+                    {
+                        "name":"Zetabytes",
+                        "unit":"ZB",
+                        "conversion":(1.000000e+15)
+                    },
+                    {
+                        "name":"Zebibytes",
+                        "unit":"ZiB",
+                        "conversion":(1.180592e+15)
+                    },
+                    {
+                        "name":"Yottabits",
+                        "unit":"Ybit",
+                        "conversion":(1.250000e+17)
+                    },
+                    {
+                        "name":"Yobibits",
+                        "unit":"Yb",
+                        "conversion":(1.511157e+17)
+                    },
+                    {
+                        "name":"Yottabytes",
+                        "unit":"YB",
+                        "conversion":(1.000000e+18)
+                    },
+                    {
+                        "name":"Yobibytes",
+                        "unit":"YiB",
+                        "conversion":(1.000000e+18)
+                    }
+                        ],
+                title="data"
+                ):
+        super().__init__(master, units, title)
+
+class MassFrame(LayoutFrame):
+    def __init__(self,
+                master,
+                units = [
+                    {
+                        "name":"Carats",
+                        "unit":"ct",
+                        "conversion":(0.0002)
+                    },
+                    {
+                        "name":"Milligrams",
+                        "unit":"mg",
+                        "conversion":(0.000001)
+                    },
+                    {
+                        "name":"Centigrams",
+                        "unit":"cg",
+                        "conversion":(0.00001)
+                    },
+                    {
+                        "name":"Decigrams",
+                        "unit":"dc",
+                        "conversion":(0.0001)
+                    },
+                    {
+                        "name":"Grams",
+                        "unit":"g",
+                        "conversion":(0.001)
+                    },
+                    {
+                        "name":"Dekagrams",
+                        "unit":"Dg",
+                        "conversion":(0.01)
+                    },
+                    {
+                        "name":"Ounces",
+                        "unit":"oz",
+                        "conversion":(0.02835)
+                    },
+                    {
+                        "name":"Hectograms",
+                        "unit":"Hg",
+                        "conversion":(0.1)
+                    },
+                    {
+                        "name":"Pounds",
+                        "unit":"lb",
+                        "conversion":(0.453592)
+                    },
+                    {
+                        "name":"Kilograms",
+                        "unit":"Kg",
+                        "conversion":(1)
+                    },
+                    {
+                        "name":"Metrice Tonnes",
+                        "unit":"t Mg",
+                        "conversion":(1000)
+                    },
+                    {
+                        "name":"Stone",
+                        "unit":"st",
+                        "conversion":(6.350293)
+                    },
+                    {
+                        "name":"Short tons (US)",
+                        "unit":"ST",
+                        "conversion":(907.1847)
+                    },
+                    {
+                        "name":"Long tons (UK)",
+                        "unit":"LT",
+                        "conversion":(1016.047)
+                    }
+                        ],
+                title="mass"
                 ):
         super().__init__(master, units, title)
